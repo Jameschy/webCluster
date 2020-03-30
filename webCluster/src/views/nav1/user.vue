@@ -12,7 +12,7 @@
 			</el-form>
 		</el-col>
 
-		<!--列表-->
+		<!--列表User-->
 		<template>
 			<el-table :data="users" highlight-current-row v-loading="loading" style="width: 100%;">
 				<el-table-column type="index" width="60">
