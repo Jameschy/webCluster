@@ -12,7 +12,7 @@ export default {
         var r = window.location.search.substr(1).match(reg);
         var context = "";
         if (r != null)
-            context = r[2];
+            context = r[3];
         reg = null;
         r = null;
         return context == null || context == "" || context == "undefined" ? "" : context;

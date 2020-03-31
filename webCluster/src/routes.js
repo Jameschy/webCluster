@@ -10,6 +10,9 @@ import Page5 from './views/nav2/Page5.vue'
 import Page6 from './views/nav3/Page6.vue'
 import echarts from './views/charts/echarts.vue'
 import ArticleTable from './views/tables/ArticleTable.vue'
+import Web1 from './views/weblist/web1.vue'
+import Web2 from './views/weblist/web2.vue'
+
 
 let routes = [
     {
@@ -24,8 +27,7 @@ let routes = [
         name: '',
         hidden: true
     },
-    //{ path: '/main', component: Main },
-
+    // { path: '/main', component: Main },
     {
         path: '/',
         component: Home,
@@ -33,7 +35,21 @@ let routes = [
         iconCls: 'fa fa-bar-chart',
         leaf: true,//只有一个节点
         children: [
-            { path: '/ArticleTable', component: ArticleTable, name: '首页' }
+            {
+                path: '/ArticleTable',
+                component: ArticleTable,
+                name: '首页',
+            }
+        ]
+    },
+    {
+        path: '/',
+        component: Home,
+        name: '网站列表',
+        iconCls: 'fa fa-bar-chart',
+        children: [
+            { path: '/web1', component: Web1, name: '绿色下载站' },
+            { path: '/web2', component: Web2, name: '金融信息港' },
         ]
     },
     {

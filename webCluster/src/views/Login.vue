@@ -62,7 +62,8 @@
                 });
               } else {
                 sessionStorage.setItem('user', JSON.stringify(user));
-                this.$router.push({ path: '/table' });
+                // 登录后载入默认指向
+                this.$router.push({ path: '/ArticleTable' });
               }
             });
           } else {

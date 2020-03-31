@@ -4,7 +4,7 @@ const LoginUsers = [
     id: 1,
     username: 'admin',
     password: '123456',
-    avatar: 'https://avatars1.githubusercontent.com/u/19465331?s=60&u=2c10c0380e869e66335809add0da426e1abadb0d&v=4',
+    avatar: 'https://avatars2.githubusercontent.com/u/19465331?s=460&u=2c10c0380e869e66335809add0da426e1abadb0d&v=4',
     name: 'DYCM'
   }
 ];
