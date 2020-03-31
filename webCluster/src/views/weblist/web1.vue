@@ -114,7 +114,6 @@
             return {}
         }
     }
-
 </script>
 
 <style scoped>
