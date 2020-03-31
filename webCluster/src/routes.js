@@ -9,6 +9,7 @@ import Page4 from './views/nav2/Page4.vue'
 import Page5 from './views/nav2/Page5.vue'
 import Page6 from './views/nav3/Page6.vue'
 import echarts from './views/charts/echarts.vue'
+import ArticleTable from './views/tables/ArticleTable.vue'
 
 let routes = [
     {
@@ -24,14 +25,15 @@ let routes = [
         hidden: true
     },
     //{ path: '/main', component: Main },
+
     {
         path: '/',
         component: Home,
-        name: '',
-        iconCls: 'fa fa-address-card',
+        name: '首页',
+        iconCls: 'fa fa-bar-chart',
         leaf: true,//只有一个节点
         children: [
-            { path: '/main', component: Main, name: '首页' }
+            { path: '/ArticleTable', component: ArticleTable, name: '首页' }
         ]
     },
     {
