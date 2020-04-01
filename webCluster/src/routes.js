@@ -10,8 +10,8 @@ import Page5 from './views/nav2/Page5.vue'
 import Page6 from './views/nav3/Page6.vue'
 import echarts from './views/charts/echarts.vue'
 import ArticleTable from './views/tables/ArticleTable.vue'
-import Web1 from './views/weblist/web1.vue'
-import Web2 from './views/weblist/web2.vue'
+import Web1 from './views/weblist/web1/web1.vue'
+import Web2 from './views/weblist/web2/web2.vue'
 
 
 let routes = [
@@ -48,7 +48,10 @@ let routes = [
         name: '网站列表',
         iconCls: 'fa fa-bar-chart',
         children: [
-            { path: '/web1', component: Web1, name: '绿色下载站' },
+            { path: '/web1', component: Web1, name: '绿色下载站',
+                children_
+
+            },
             { path: '/web2', component: Web2, name: '金融信息港' },
         ]
     },
@@ -98,5 +101,7 @@ let routes = [
         redirect: { path: '/404' }
     }
 ];
+
+
 
 export default routes;
