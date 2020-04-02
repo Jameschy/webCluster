@@ -49,7 +49,10 @@ let routes = [
         iconCls: 'fa fa-bar-chart',
         children: [
             { path: '/web1', component: Web1, name: '绿色下载站',
-                children_
+                // children_item:[
+                //     { path: '/class1', component: Class1, name: '新闻',},
+                //     { path: '/class2', component: Class2, name: '软件',}
+                // ]
 
             },
             { path: '/web2', component: Web2, name: '金融信息港' },

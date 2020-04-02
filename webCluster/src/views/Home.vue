@@ -26,58 +26,18 @@
 
 
 
-				<!--<el-menu :default-active="$route.path" id="menuClass" class="el-menu-vertical-demo" @open="handleopen" @close="handleclose" @select="handleselect"-->
-							 <!--unique-opened router v-show="!collapsed">-->
+				<el-menu :default-active="$route.path" id="menuClass" class="el-menu-vertical-demo" @open="handleopen" @close="handleclose" @select="handleselect"
+							 unique-opened router v-show="!collapsed">
 
-					<!--<template v-for="(item,index) in $router.options.routes" v-if="!item.hidden">-->
-						<!--<el-submenu :index="index+''" v-if="!item.leaf">-->
-							<!--<template slot="title"><i :class="item.iconCls"></i>{{item.name}}</template>-->
-							<!--<el-menu-item v-for="child in item.children" :index="child.path" :key="child.path" v-if="!child.hidden">{{child.name}}</el-menu-item>-->
-						<!--</el-submenu>-->
-						<!--<el-menu-item v-if="item.leaf&&item.children.length>0" :index="item.children[0].path"><i :class="item.iconCls"></i>{{item.children[0].name}}</el-menu-item>-->
-					<!--</template>-->
-				<!--</el-menu>-->
-
-				<el-menu
-						default-active="/orderManage/rechargeCard/rechargeCardManage"
-						background-color="#545c64"
-						text-color="#fff"
-						active-text-color="#ffd04b">
-
-					<!--一级菜单-->
-					<template v-for="item in list">
-						<el-submenu v-if="item.childrenMenu && item.childrenMenu.length" :index="item.path" :key="item.path">
-							<template slot="title">
-								<i :class="item.icon"></i>
-								<span>{{item.name}}</span>
-							</template>
-
-							<!--二级菜单-->
-							<template v-for="itemChild in item.childrenMenu">
-								<el-submenu v-if="itemChild.children && itemChild.children.length" :index="itemChild.path" :key="itemChild.path">
-									<template slot="title">
-										<i :class="itemChild.icon"></i>
-										<span>{{itemChild.name}}</span>
-									</template>
-
-									<!--三级菜单-->
-									<el-menu-item v-for="itemChild_child in itemchild.children" :index="itemChild_child.path" :key="itemChild_child.path">
-										<span slot="title">{{itemChild_child.name}}</span>
-									</el-menu-item>
-
-								</el-submenu>
-								<el-menu-item v-else :index="itemChild.path" :key="itemChild.path">{{itemChild.name}}</el-menu-item>
-
-							</template>
-
+					<template v-for="(item,index) in $router.options.routes" v-if="!item.hidden">
+						<el-submenu :index="index+''" v-if="!item.leaf">
+							<template slot="title"><i :class="item.iconCls"></i>{{item.name}}</template>
+							<el-menu-item v-for="child in item.children" :index="child.path" :key="child.path" v-if="!child.hidden">{{child.name}}</el-menu-item>
 						</el-submenu>
-						<el-menu-item v-else :index="item.path" :key="item.path">
-							<i :class="item.icon"></i>
-							<span slot="title">{{item.name}}</span>
-						</el-menu-item>
+						<el-menu-item v-if="item.leaf&&item.children.length>0" :index="item.children[0].path"><i :class="item.iconCls"></i>{{item.children[0].name}}</el-menu-item>
 					</template>
-
 				</el-menu>
+
 
 
 
